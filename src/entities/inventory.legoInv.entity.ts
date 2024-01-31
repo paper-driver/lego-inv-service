@@ -1,6 +1,6 @@
 import { AutoMap } from "@automapper/classes";
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
-import { Part } from "./Part.legoInv.entity";
+import { Part } from "./part.legoInv.entity";
 
 @Entity({
     name: "Inventories"

@@ -6,8 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { configEnvvariables, loadDBConfig } from './config/config';
 import { LegoInvService } from './services/legoInv.service';
 import { Inventory } from './entities/inventory.legoInv.entity';
-import { Part } from './entities/Part.legoInv.entity';
-import { Source } from './entities/Source.legoInv.entity';
+import { Part } from './entities/part.legoInv.entity';
+import { Source } from './entities/source.legoInv.entity';
 import { Price } from './entities/price.legoInv.entity';
 
 configEnvvariables();

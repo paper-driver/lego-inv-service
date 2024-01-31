@@ -1,7 +1,7 @@
 import { AutoMap } from "@automapper/classes";
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
-import { Part } from "./Part.legoInv.entity";
-import { Source } from "./Source.legoInv.entity";
+import { Part } from "./part.legoInv.entity";
+import { Source } from "./source.legoInv.entity";
 
 @Entity({
     name: "Prices"
