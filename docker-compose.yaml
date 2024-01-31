@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+    ports:
+      - mode: host
+        published: 8080
+        target: 8080
+    deploy:
+      mode: global
+      restart_policy:
+        condition: on-failure
