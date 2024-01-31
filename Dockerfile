@@ -1,4 +1,5 @@
 FROM node:21.6-alpine
+RUN npm run build
 
 USER root
 
