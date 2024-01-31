@@ -1,18 +1,17 @@
 FROM node:21.6-alpine
-RUN npm install
-
-COPY . .
-
-RUN npm run build
 
 USER root
 
 WORKDIR /app
 
-ADD dist/ /app/dist/
-ADD node_modules/ /app/node_modules/
-ADD package*.json /app/
-ADD .env.cloud /app/
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+RUN apk update && apk add bash
 
 USER 1001
 EXPOSE 8080
