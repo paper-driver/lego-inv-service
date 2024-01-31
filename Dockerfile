@@ -1,4 +1,8 @@
 FROM node:21.6-alpine
+RUN npm install
+
+COPY . .
+
 RUN npm run build
 
 USER root
