@@ -6,9 +6,9 @@ services:
     ports:
       - '8080:8080'
     container_name: lego-inv-service
-    volumes:
-      - ./dist/:/app/dist/
-      - ./node_modules/:/app/node_modules/
-      - ./package.json:/app/package.json
-      - ./package-lock.json:/app/package-lock.json
-      - ./.env.cloud:/app/.env.cloud
+    # volumes:
+    #   - ./dist/:/app/dist/
+    #   - ./node_modules/:/app/node_modules/
+    #   - ./package.json:/app/package.json
+    #   - ./package-lock.json:/app/package-lock.json
+    #   - ./.env.cloud:/app/.env.cloud
