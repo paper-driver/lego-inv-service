@@ -15,7 +15,4 @@ export class Inventory {
     @Column({name: "amount_own"})
     own: number;
 
-    @Column({name: "amount_used"})
-    used: number;
-
 }

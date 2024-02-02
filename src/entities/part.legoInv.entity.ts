@@ -18,4 +18,7 @@ export class Part {
     @Column({name: "color"})
     color: string;
 
+    @Column({name: "description"})
+    descr: string;
+
 }

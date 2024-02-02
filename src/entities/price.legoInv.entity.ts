@@ -23,6 +23,9 @@ export class Price {
     @Column({name: "price"})
     price: string;
 
+    @Column({name: "updated_date", type: "datetime", default: () => "CURRENT_TIMESTAMP" })
+    priceDate: Date;
+
 }   
 
 export enum Condition {

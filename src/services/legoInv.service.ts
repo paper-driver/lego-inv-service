@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
+import { BrickPrice } from "src/dtos/lego-dto";
 import { Inventory } from "src/entities/inventory.legoInv.entity";
 import { Part } from "src/entities/part.legoInv.entity";
 import { Price } from "src/entities/price.legoInv.entity";
@@ -19,7 +20,20 @@ export class LegoInvService {
         return this.partRepo.find();
     }
 
+    findParts(legoElmId: number): Promise<Part[]> {
+        return this.partRepo.findBy({ legoElmId });
+    }
+
     findAllSources(): Promise<Source[]> {
         return this.sourceRepo.find();
     }
+
+    findInventory(legoElmId: number): Promise<Inventory> {
+        return this.invRepo.findOneBy({ legoElmId });
+    }
+
+    findPrice(legoElmId: number): Promise<Price> {
+        return this.priceRepo.findOneBy({ legoElmId });
+    }
+
 }
