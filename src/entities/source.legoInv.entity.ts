@@ -11,7 +11,7 @@ export class Source {
     @Column({name: "source_name"})
     sourceName: string;
 
-    @Column({name: "source_url"})
+    @Column({name: "source_url", unique: true})
     sourceUrl: string;
 
 }

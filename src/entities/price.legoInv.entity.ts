@@ -1,5 +1,5 @@
 import { AutoMap } from "@automapper/classes";
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, Long, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 import { Part } from "./part.legoInv.entity";
 import { Source } from "./source.legoInv.entity";
 
@@ -20,8 +20,8 @@ export class Price {
     @PrimaryColumn({name: "condition"})
     condition: Condition;
 
-    @Column({name: "price"})
-    price: string;
+    @Column({name: "price", type: "float"})
+    price: number;
 
     @Column({name: "updated_date", type: "datetime", default: () => "CURRENT_TIMESTAMP" })
     priceDate: Date;
